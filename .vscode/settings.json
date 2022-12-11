@@ -1,0 +1,6 @@
+{
+    "explorer.excludeGitIgnore": true,
+    "search.exclude": {
+        "**/data": true
+    }
+}
