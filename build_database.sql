@@ -4,8 +4,12 @@ CREATE USER IF NOT EXISTS scrsystem_dbuser@localhost IDENTIFIED WITH mysql_nativ
 
 GRANT ALL ON scrsystem_db.* TO scrsystem_dbuser@localhost;
 
-CREATE USER IF NOT EXISTS scrsystem_dbuser@'172.26.%' IDENTIFIED WITH mysql_native_password BY 'P@ssW0rd';
+CREATE USER IF NOT EXISTS scrsystem_dbuser@'172.%' IDENTIFIED WITH mysql_native_password BY 'P@ssW0rd';
 
-GRANT ALL ON scrsystem_db.* TO scrsystem_dbuser@'172.26.%';
+GRANT ALL ON scrsystem_db.* TO scrsystem_dbuser@'172.%';
+
+CREATE USER IF NOT EXISTS scrsystem_dbuser@'192.168.%' IDENTIFIED WITH mysql_native_password BY 'P@ssW0rd';
+
+GRANT ALL ON scrsystem_db.* TO scrsystem_dbuser@'192.168.%';
 
 FLUSH PRIVILEGES;
